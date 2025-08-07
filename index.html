@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Job & Recruiter Tracker</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1>Job & Recruiter Tracker</h1>
+                <p>Save interesting opportunities and contacts</p>
+            </header>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="jobs">Job Postings</button>
+                <button class="tab-btn" data-tab="recruiters">Recruiters</button>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-panel active" id="jobs-panel">
+                    <div class="input-group">
+                        <input type="text" id="job-title-input" placeholder="Job title (optional)">
+                        <input type="url" id="job-url-input" placeholder="Job posting URL">
+                        <div class="button-group">
+                            <button id="save-job-btn" class="primary-btn">Save Job</button>
+                            <button id="save-job-tab-btn" class="secondary-btn">Save Current Tab</button>
+                        </div>
+                    </div>
+                    <div class="list-header">
+                        <h3>Saved Job Postings (<span id="jobs-count">0</span>)</h3>
+                        <button id="delete-jobs-btn" class="delete-btn">Clear All</button>
+                    </div>
+                    <ul id="jobs-list" class="items-list"></ul>
+                </div>
+
+                <div class="tab-panel" id="recruiters-panel">
+                    <div class="input-group">
+                        <input type="text" id="recruiter-name-input" placeholder="Recruiter name">
+                        <input type="text" id="recruiter-company-input" placeholder="Company (optional)">
+                        <input type="url" id="recruiter-url-input" placeholder="LinkedIn profile or contact URL">
+                        <div class="button-group">
+                            <button id="save-recruiter-btn" class="primary-btn">Save Recruiter</button>
+                            <button id="save-recruiter-tab-btn" class="secondary-btn">Save Current Tab</button>
+                        </div>
+                    </div>
+                    <div class="list-header">
+                        <h3>Saved Recruiters (<span id="recruiters-count">0</span>)</h3>
+                        <button id="delete-recruiters-btn" class="delete-btn">Clear All</button>
+                    </div>
+                    <ul id="recruiters-list" class="items-list"></ul>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

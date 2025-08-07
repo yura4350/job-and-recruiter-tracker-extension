@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-width: 450px;
+    max-width: 500px;
+    min-height: 600px;
+}
+
+.container {
+    background: white;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+header p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+.tabs {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    background: transparent;
+    color: #6c757d;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-btn:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.tab-btn.active {
+    color: #667eea;
+    background: white;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.primary-btn, .secondary-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.secondary-btn {
+    background: #f8f9fa;
+    color: #6c757d;
+    border: 2px solid #e9ecef;
+}
+
+.secondary-btn:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.list-header h3 {
+    margin: 0;
+    color: #495057;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.delete-btn {
+    padding: 6px 12px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+.items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.items-list:empty::after {
+    content: 'No items saved yet. Add some using the form above!';
+    display: block;
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 40px 20px;
+}
+
+.items-list li {
+    background: #f8f9fa;
+    margin-bottom: 8px;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.items-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-item .job-title {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.recruiter-item .recruiter-name {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.recruiter-item .recruiter-company {
+    color: #6c757d;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.item-url {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 13px;
+    word-break: break-all;
+}
+
+.item-url:hover {
+    text-decoration: underline;
+}
+
+.item-date {
+    color: #6c757d;
+    font-size: 11px;
+    margin-top: 8px;
+    text-align: right;
+}
+
+/* Scrollbar styling */
+.items-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.items-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.items-list::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.items-list::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
