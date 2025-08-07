@@ -67,7 +67,7 @@ chrome-extension/
 - **Open Links**: Click any URL in your lists to open it in a new tab
 - **Keyboard Support**: Press Enter in any input field to save
 
-## 🎨 Interface Guide
+## Interface Guide
 
 ### Job Postings Tab
 - **Job Title**: Optional field for the position name
